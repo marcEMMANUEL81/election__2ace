@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Définition des variables et configuration de la page*/
+
+:root
+{
+    --var-bodycolor: #fff;
+    --var-text-primary-color: rgb(18, 18, 18);
+    --var-text-bold: 700; 
+    --var-common-text-size: 16px;
+    --var-title-size: 36px;
+    --var-second-title-size: 20px;
+    --var-secondary-color: crimson;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'poppins';
+}
+
+/*Header styling*/
+
+header
+{
+    position: fixed;
+    top: 0;
+    padding: 30px 0;
+    width: 100%;
+    background-color: var(--var-bodycolor);
+    display: flex;
+    justify-content: center;
+    z-index: 998;
+}
+
+.menu
+{
+    display: none;
+}
+
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+}
+
+.logo__2ace
+{
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+}
+
+.logo__2ace img
+{
+    height: 35px;
+    margin-right: 20px;
+}
+
+.nav__bar
+{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navitem a
+{
+    text-decoration: none;
+    color: var(--var-text-primary-color);
+    font-weight: var(--var-text-bold);
+    transition: all .3s ease-in;
+}
+
+.navitem a:hover
+{
+    color: var(--var-secondary-color);
+}
+
+.navitem
+{
+    position: relative;
+}
+
+.navitem::before
+{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--var-secondary-color);
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+.navitem:hover::before
+{
+    width: 100%;
+}
+
+.logo__2ace h3 a
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--var-text-primary-color);
+    font-family: 'Poppins';
+}
+
+body
+{
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop__up
+{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(131, 131, 131, 0.561);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s cubic-bezier(.5, 0, 0, 1);
+    padding: 20px;
+}
+
+.visible
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop__up__container
+{
+    position: relative;
+    width: 250px;    
+    height: 280px;
+    padding: 60px 30px 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--var-bodycolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop__up__container i
+{
+    position: absolute;
+    top: 2em;
+    right: 2.5em;
+    color: var(--var-secondary-color);
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pop__up__container h1
+{
+    font-size: 1.5em;   
+    margin-bottom: 30px;
+}
+
+.pop__up__container button
+{
+    padding: 1em 6rem;
+    border-radius: 5px;
+    background-color: var(--var-secondary-color);
+    color: var(--var-bodycolor);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.bloc__container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.input__code
+{
+    padding: 14px;
+    border-radius: 5px;
+    outline: none;
+    border: solid rgb(196, 196, 196) 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.menu
+{
+    display: none;
+}
+
+.submit__btn
+{
+    height: 45px;
+    border: none;
+    background-color: var(--var-secondary-color);
+    color: var(--var-bodycolor);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*media query*/
+
+@media screen and (max-width: 500px) {
+
+    .container
+{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .nav__bar
+    {
+        display: none;
+    }
+
+    .complete
+    {
+        /* height: 500px; */
+        padding-top: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu i
+    {
+    font-weight: 900;
+    font-size: 18px;
+    }
+
+    .navitem
+    {
+        margin-bottom: 15px;
+    }
+
+}

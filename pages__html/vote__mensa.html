@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles__css/vote.css">
+    <script src="https://kit.fontawesome.com/f3d1276610.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo__2ace">
+                <img src="../assets/images/logo__2ace.png" alt="">
+                <h3 class="logo__2ace__title"> <a href="../pages__html/index.html">2ACE</a> </h3>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars menu__btn"></i>
+            </div>
+            <div class="nav__bar">
+                <div class="navitem">
+                    <a href="../pages__html/index.html">Home</a>
+                </div>
+                <div class="navitem">
+                    <a href="../pages__html/index.html">Candidats</a>
+                </div>
+                <div class="navitem">
+                    <a href="../pages__html/statistiques.html">Statistiques</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="pop__up">
+        <div class="pop__up__container">
+            <i class="fa-solid fa-xmark close"></i>
+            <h1>Êtes vous sûre de vouloir accorder votre voix à ce candidat</h1>
+            <button type="button" onclick="vote(2)">Accorder la voie</button>
+        </div>
+    </div>
+
+    <div class="bloc__container">
+        <h1>Entrez votre code de validation</h1>
+        <input class="input__code men" type="text" placeholder="entrez le code ...">
+        <input class="submit__btn" type="submit" placeholder="valider">
+    </div>
+
+    <script src="../code__js/api.js"></script>
+    <script src="../code__js/app.js"></script>
+    <script src="../code__js/vote.js"></script>
+
+    
+</body>
+</html>
