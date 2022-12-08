@@ -139,5 +139,5 @@ async function affichage1() {
 
 }
 
-if(window.location.href == "http://192.168.1.101:5501/plateforme__vote/pages__html/statistiques.html")
+if(window.location.href == "https://marcemmanuel81.github.io/election__2ace/pages__html/statistiques.html")
     stats()
